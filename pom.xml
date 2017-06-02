@@ -8,7 +8,7 @@
 
   <groupId>com.github.matthewtckr</groupId>
   <artifactId>pdi-encrypt-plugin</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>PDI Encrypt Plugin</name>
 
   <developers>
@@ -16,6 +16,12 @@
       <name>Matt Tucker</name>
     </developer>
   </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:matthewtckr/pdi-encrypt-plugin.git</connection>
+    <url>scm:git:git@github.com:matthewtckr/pdi-encrypt-plugin.git</url>
+    <developerConnection>scm:git:git@github.com:matthewtckr/pdi-encrypt-plugin.git</developerConnection>
+  </scm>
 
   <properties>
   	<kettle.version>6.1.0.1-196</kettle.version>
@@ -103,6 +109,11 @@
       </plugins>
     </pluginManagement>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins></groupId>
+        <artifactId>maven-release-pluginn</artifactId>
+        <version>2.5.3</version>
+      </plugin>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <executions>
