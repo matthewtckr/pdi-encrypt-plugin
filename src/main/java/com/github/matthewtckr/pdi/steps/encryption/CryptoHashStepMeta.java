@@ -26,7 +26,7 @@ import org.w3c.dom.Node;
 
 @Step(
     id = "ComGithubMatthewtckrCryptoHash",
-    image = "com/github/matthewtckr/pdi/steps/encryption.png",
+    image = "com/github/matthewtckr/pdi/steps/encryption/CryptoHashStep.svg",
     i18nPackageName = "com.github.matthewtckr.pdi.steps.encryption",
     name = "CryptoHashStep.Name",
     description = "CryptoHashStep.TooltipDesc",
@@ -102,6 +102,7 @@ public class CryptoHashStepMeta extends BaseStepMeta implements StepMetaInterfac
   public void setDefault() {
     setCost( DEFAULT_COST );
     setCryptoHashType( CryptoHashType.BCRYPT );
+    setOutputFieldName( "output" );
   }
 
   @Override
