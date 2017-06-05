@@ -34,7 +34,9 @@ import org.w3c.dom.Node;
   )
 public class CryptoHashStepMeta extends BaseStepMeta implements StepMetaInterface {
 
-  public static int DEFAULT_COST = 12;
+  public static int BCRYPT_DEFAULT_COST = 12;
+  public static int BCRYPT_MINIMUM_COST = 4; // See org.bouncycastle.crypto.generators.BCrypt.MIN_COST
+  public static int BCRYPT_MAXIMUM_COST = 31; // See org.bouncycastle.crypto.generators.BCrypt.MAX_COST
   public static enum CryptoHashType {
     BCRYPT {
       @Override
@@ -100,7 +102,7 @@ public class CryptoHashStepMeta extends BaseStepMeta implements StepMetaInterfac
 
   @Override
   public void setDefault() {
-    setCost( DEFAULT_COST );
+    setCost( BCRYPT_DEFAULT_COST );
     setCryptoHashType( CryptoHashType.BCRYPT );
     setOutputFieldName( "output" );
   }

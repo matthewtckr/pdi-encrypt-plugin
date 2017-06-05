@@ -72,6 +72,6 @@ public class CryptoHashStepData extends BaseStepData implements StepDataInterfac
     }
     sha3Digest.reset();
     sha3Digest.update( password.getBytes() );
-    return Hex.toHexString(sha3Digest.digest() );
+    return Hex.toHexString( sha3Digest.digest() );
   }
 }
