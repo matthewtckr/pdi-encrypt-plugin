@@ -30,7 +30,9 @@ import org.w3c.dom.Node;
     i18nPackageName = "com.github.matthewtckr.pdi.steps.encryption",
     name = "CryptoHashStep.Name",
     description = "CryptoHashStep.TooltipDesc",
-    categoryDescription = "i18n:org.pentaho.di.trans.step:BaseStep.Category.Cryptography"
+    categoryDescription = "i18n:org.pentaho.di.trans.step:BaseStep.Category.Cryptography",
+    documentationUrl = "https://github.com/matthewtckr/pdi-encrypt-plugin/wiki",
+    casesUrl = "https://github.com/matthewtckr/pdi-encrypt-plugin/issues"
   )
 public class CryptoHashStepMeta extends BaseStepMeta implements StepMetaInterface {
 
