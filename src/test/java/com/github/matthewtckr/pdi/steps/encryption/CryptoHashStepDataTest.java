@@ -31,18 +31,18 @@ public class CryptoHashStepDataTest {
     String encryptedPassword = data.bcrypt( "password" );
     assertThat( encryptedPassword, notNullValue() );
     assertThat( encryptedPassword.length(), either( equalTo( 59 ) ).or( equalTo( 60 ) ) );
-    assertThat( encryptedPassword, startsWith( "$2a$" ) );
+    assertThat( encryptedPassword, startsWith( "$2y$" ) );
 
     encryptedPassword = data.bcrypt( "61626300", 9 );
     assertThat( encryptedPassword, notNullValue() );
     assertThat( encryptedPassword.length(), either( equalTo( 59 ) ).or( equalTo( 60 ) ) );
-    assertThat( encryptedPassword, startsWith( "$2a$09$" ) );
+    assertThat( encryptedPassword, startsWith( "$2y$09$" ) );
     
     byte[] salt = new BigInteger( 127, new Random() ).toByteArray(); // Random 16-byte salt
     encryptedPassword = data.bcrypt( "61626300", salt, 9 );
     assertThat( encryptedPassword, notNullValue() );
     assertThat( encryptedPassword.length(), either( equalTo( 59 ) ).or( equalTo( 60 ) ) );
-    assertThat( encryptedPassword, startsWith( "$2a$09$" ) );
+    assertThat( encryptedPassword, startsWith( "$2y$09$" ) );
   }
 
   @Test
@@ -69,7 +69,10 @@ public class CryptoHashStepDataTest {
 
   @Test
   public void testEncrypt() throws KettleStepException {
+    // NULL CryptoHashType returns original value
     assertThat( data.encrypt( "123456", (CryptoHashType) null, 12 ), equalTo( "123456" ) );
+
+    // Non-NULL CryptoHashType does not return original value
     for ( CryptoHashType method : CryptoHashType.values() ) {
       assertThat( data.encrypt( "123456", method, 12 ), not( equalTo( "123456" ) ) );
     }

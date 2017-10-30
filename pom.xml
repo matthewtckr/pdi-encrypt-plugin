@@ -26,7 +26,7 @@
 
   <properties>
   	<kettle.version>6.1.0.3-223</kettle.version>
-  	<bouncycastle.version>1.57</bouncycastle.version>
+  	<bouncycastle.version>1.58</bouncycastle.version>
   </properties>
 
   <dependencies>
@@ -70,7 +70,7 @@
   <repositories>
     <repository>
       <id>Pentaho Artifactory</id>
-      <url>http://repo.pentaho.org/artifactory/repo</url>
+      <url>http://nexus.pentaho.org/content/groups/omni</url>
     </repository>
   </repositories>
   
