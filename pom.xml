@@ -25,7 +25,7 @@
   </scm>
 
   <properties>
-  	<kettle.version>6.1.0.3-223</kettle.version>
+  	<kettle.version>7.1.0.32-246</kettle.version>
   	<bouncycastle.version>1.58</bouncycastle.version>
   </properties>
 
