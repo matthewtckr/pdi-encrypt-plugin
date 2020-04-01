@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-jar-parent-pom</artifactId>
-    <version>1.1.8</version>
+    <version>9.1.0.0-130</version>
   </parent>
 
   <groupId>com.github.matthewtckr</groupId>
