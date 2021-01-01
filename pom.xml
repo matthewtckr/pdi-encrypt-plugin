@@ -26,7 +26,7 @@
 
   <properties>
   	<kettle.version>6.1.0.3-223</kettle.version>
-  	<bouncycastle.version>1.58</bouncycastle.version>
+  	<bouncycastle.version>1.68</bouncycastle.version>
   </properties>
 
   <dependencies>
