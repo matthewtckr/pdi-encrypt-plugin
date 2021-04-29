@@ -1,0 +1,13 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.pentaho:pentaho-ce-jar-parent-pom
+    versions:
+    - 9.2.0.0-168
+    - 9.2.0.0-193
